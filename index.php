@@ -9,4 +9,5 @@
  * @copyright Tomoaki Nagahara All right reserved.
  */
 //	...
+include(__DIR__.'/TEMPLATE.trait.php');
 include(__DIR__.'/Template.class.php');
