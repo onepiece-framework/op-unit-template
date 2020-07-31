@@ -62,11 +62,14 @@ trait UNIT_TEMPLATE
 	function __construct()
 	{
 		//	Init template directory.
+		/*
 		if( $this->_dir = Env::Get('template')['directory'] ?? false ){
 			$this->_dir = rtrim(ConvertPath($this->_dir), '/').'/';
 		}else{
 			throw new Exception('Template directory has not been set.');
 		};
+		*/
+		$this->_dir = RootPath('asset') . 'template/';
 
 		//	Check if exists.
 		if(!file_exists($this->_dir) ){
