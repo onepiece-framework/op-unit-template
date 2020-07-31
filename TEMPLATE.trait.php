@@ -80,9 +80,9 @@ trait UNIT_TEMPLATE
 	/** Search exists file path.
 	 *
 	 * @param  string $path
-	 * @return string
+	 * @return string|boolean
 	 */
-	private function _Path($path):string
+	private function _Path($path)
 	{
 		//	...
 		if( file_exists($path) ){
@@ -101,6 +101,9 @@ trait UNIT_TEMPLATE
 
 		//	...
 		Notice::Set("This file has not been exists. ($path)");
+
+		//	...
+		return false;
 	}
 
 	/** Return template string.
