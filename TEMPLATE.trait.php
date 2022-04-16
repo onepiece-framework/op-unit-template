@@ -160,7 +160,7 @@ trait UNIT_TEMPLATE
 			//	...
 			if( $current_template_argument ){
 				//	Extract variable.
-				if(!$count = extract($current_template_argument, null, null)){
+				if(!$count = extract($current_template_argument /*, null, null */ )){
 					//	Maybe not assoc.
 					throw new Exception("Passed arguments is not an assoc array. (count=$count)");
 				};
